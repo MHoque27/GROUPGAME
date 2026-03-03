@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ds83ybrj2rqrt"]
+
+[ext_resource type="Script" uid="uid://dyciaqdgd1xc5" path="res://game.gd" id="1_ig7tw"]
+
+[node name="Game" type="Node2D" unique_id=36013997]
+script = ExtResource("1_ig7tw")
+
+[node name="World" type="Node2D" parent="." unique_id=1616509885]
+
+[node name="Level" type="Node2D" parent="World" unique_id=674450977]
+
+[node name="TileMap" type="TileMap" parent="World/Level" unique_id=1774044614]
+format = 2
+
+[node name="Parallax2D" type="Parallax2D" parent="World/Level" unique_id=408321566]
