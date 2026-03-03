@@ -1,16 +1,13 @@
 [gd_scene format=3 uid="uid://devlv77xlm22x"]
 
-[ext_resource type="Texture2D" uid="uid://fgvqcj24kk32" path="res://spritesheet (1).png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bnr6g4wa75j18" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://cwa011ptaomg3" path="res://scenes/processes/gravity_physics.tscn" id="2_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://dyjbfat4qpwwy" path="res://scenes/processes/InputProcess.tscn" id="3_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://cgra0l1b87sr8" path="res://scenes/processes/movement_component.tscn" id="4_dqkch"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u8vuu"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_3vyb7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_3vyb7")
-}],
+"frames": [],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
@@ -23,7 +20,11 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
 
-[node name="player" type="CharacterBody2D" unique_id=321061833]
+[node name="player" type="CharacterBody2D" unique_id=321061833 node_paths=PackedStringArray("gravity_physics", "input_process", "movement_component")]
+script = ExtResource("1_g2els")
+gravity_physics = NodePath("GravityPhysics")
+input_process = NodePath("InputProcess")
+movement_component = NodePath("MovementComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=624123831]
 sprite_frames = SubResource("SpriteFrames_u8vuu")
@@ -31,3 +32,9 @@ animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=696046106]
 shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="GravityPhysics" parent="." unique_id=1097065435 instance=ExtResource("2_qhqgy")]
+
+[node name="InputProcess" parent="." unique_id=1158769223 instance=ExtResource("3_qhqgy")]
+
+[node name="MovementComponent" parent="." unique_id=1248565539 instance=ExtResource("4_dqkch")]

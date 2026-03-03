@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://2u538jwb3vyv"]
 
-[ext_resource type="Script" uid="uid://v40vbwgetv1t" path="res://scripts/main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://c4wfrgi810u4t" path="res://game.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://devlv77xlm22x" path="res://scenes/player.tscn" id="2_0xm2m"]
 
 [node name="Game" type="Node2D" unique_id=36013997]
 script = ExtResource("1_ig7tw")
@@ -13,3 +14,5 @@ script = ExtResource("1_ig7tw")
 format = 2
 
 [node name="Parallax2D" type="Parallax2D" parent="World/Level" unique_id=408321566]
+
+[node name="player" parent="World/Level" unique_id=321061833 instance=ExtResource("2_0xm2m")]
