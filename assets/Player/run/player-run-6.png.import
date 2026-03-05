@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eoa3jcaje6pw"
-path="res://.godot/imported/Custom _ Edited - Hamtaro Customs - Characters - Mystery (Ham-Hams Unite Style).png-a2e9681de836e3c7ddf35f92f840db84.ctex"
+uid="uid://b483gdrdy3858"
+path="res://.godot/imported/player-run-6.png-a752ebaf4f0b1af05c28bf789a9be7b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/models/Custom _ Edited - Hamtaro Customs - Characters - Mystery (Ham-Hams Unite Style).png"
-dest_files=["res://.godot/imported/Custom _ Edited - Hamtaro Customs - Characters - Mystery (Ham-Hams Unite Style).png-a2e9681de836e3c7ddf35f92f840db84.ctex"]
+source_file="res://assets/Player/run/player-run-6.png"
+dest_files=["res://.godot/imported/player-run-6.png-a752ebaf4f0b1af05c28bf789a9be7b7.ctex"]
 
 [params]
 

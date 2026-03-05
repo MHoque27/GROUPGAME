@@ -14,6 +14,12 @@ func handle_move_animation(move_direction: float) -> void:
 	handle_horizontal_flip(move_direction)
 	
 	if move_direction != 0:
-		sprite.play("run")
+		sprite.play("Run")
 	else:
-		sprite.play("idle")
+		sprite.play("Idle")
+
+func handle_jump_animation(is_jumping: bool, is_falling: bool) -> void:
+	if is_jumping:
+		sprite.play("Jump")
+	elif is_falling:
+		sprite.play("Fall")
