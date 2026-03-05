@@ -1,36 +1,99 @@
 [gd_scene format=3 uid="uid://devlv77xlm22x"]
 
 [ext_resource type="Script" uid="uid://bnr6g4wa75j18" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://dkkgn02xuex81" path="res://scenes/models/Player/jump/player-jump-2.png" id="2_qfm1y"]
 [ext_resource type="PackedScene" uid="uid://cwa011ptaomg3" path="res://scenes/processes/gravity_physics.tscn" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://c8ts1466ganhs" path="res://scenes/models/Player/idle/player-idle-1.png" id="3_fulsm"]
 [ext_resource type="PackedScene" uid="uid://dyjbfat4qpwwy" path="res://scenes/processes/InputProcess.tscn" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dc3epq3eugipi" path="res://scenes/models/Player/idle/player-idle-2.png" id="4_4r5pv"]
 [ext_resource type="PackedScene" uid="uid://cgra0l1b87sr8" path="res://scenes/processes/movement_component.tscn" id="4_dqkch"]
+[ext_resource type="Texture2D" uid="uid://bg574lllcitqg" path="res://scenes/models/Player/idle/player-idle-3.png" id="5_60mlk"]
+[ext_resource type="Texture2D" uid="uid://vw4hpjdhyufi" path="res://scenes/models/Player/idle/player-idle-4.png" id="6_i4ail"]
+[ext_resource type="Texture2D" uid="uid://bx4r3dlkwpb8n" path="res://scenes/models/Player/jump/player-jump-1.png" id="7_a38lo"]
+[ext_resource type="Texture2D" uid="uid://bu1hax5nrsgxs" path="res://scenes/models/Player/run/player-run-1.png" id="8_4ni07"]
+[ext_resource type="Texture2D" uid="uid://d3rwqfmxiwxt" path="res://scenes/models/Player/run/player-run-2.png" id="9_l71n6"]
+[ext_resource type="Texture2D" uid="uid://chwu4lxxd1p1r" path="res://scenes/models/Player/run/player-run-3.png" id="10_ke2ow"]
+[ext_resource type="Texture2D" uid="uid://cgdp3xxm88j2x" path="res://scenes/models/Player/run/player-run-4.png" id="11_ujl30"]
+[ext_resource type="Texture2D" uid="uid://1u8cmiqky363" path="res://scenes/models/Player/run/player-run-5.png" id="12_31cv2"]
+[ext_resource type="Texture2D" uid="uid://b483gdrdy3858" path="res://scenes/models/Player/run/player-run-6.png" id="13_pf23h"]
+[ext_resource type="PackedScene" uid="uid://cdmw2hj50rvnr" path="res://scenes/processes/animation_component.tscn" id="17_dt7fs"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_u8vuu"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqfne"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qfm1y")
+}],
 "loop": true,
-"name": &"idle",
+"name": &"Fall",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fulsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4r5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_60mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i4ail")
+}],
 "loop": true,
-"name": &"new_animation",
-"speed": 5.0
+"name": &"Idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_a38lo")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_l71n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ke2ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ujl30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_31cv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pf23h")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 6.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 8.0
+height = 22.0
 
-[node name="player" type="CharacterBody2D" unique_id=321061833 node_paths=PackedStringArray("gravity_physics", "input_process", "movement_component")]
+[node name="player" type="CharacterBody2D" unique_id=321061833 node_paths=PackedStringArray("gravity_physics", "input_process", "movement_component", "animation_component")]
 script = ExtResource("1_g2els")
 gravity_physics = NodePath("GravityPhysics")
 input_process = NodePath("InputProcess")
 movement_component = NodePath("MovementComponent")
+animation_component = NodePath("AnimationComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=624123831]
-sprite_frames = SubResource("SpriteFrames_u8vuu")
-animation = &"idle"
+sprite_frames = SubResource("SpriteFrames_wqfne")
+animation = &"Fall"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=696046106]
+position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_g2els")
 
 [node name="GravityPhysics" parent="." unique_id=1097065435 instance=ExtResource("2_qhqgy")]
@@ -38,3 +101,6 @@ shape = SubResource("CapsuleShape2D_g2els")
 [node name="InputProcess" parent="." unique_id=1158769223 instance=ExtResource("3_qhqgy")]
 
 [node name="MovementComponent" parent="." unique_id=1248565539 instance=ExtResource("4_dqkch")]
+
+[node name="AnimationComponent" parent="." unique_id=910548865 node_paths=PackedStringArray("sprite") instance=ExtResource("17_dt7fs")]
+sprite = NodePath("../AnimatedSprite2D")
