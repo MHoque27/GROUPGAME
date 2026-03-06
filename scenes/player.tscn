@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://1u8cmiqky363" path="res://assets/Player/run/player-run-5.png" id="12_31cv2"]
 [ext_resource type="Texture2D" uid="uid://b483gdrdy3858" path="res://assets/Player/run/player-run-6.png" id="13_pf23h"]
 [ext_resource type="PackedScene" uid="uid://cdmw2hj50rvnr" path="res://scenes/processes/animation_component.tscn" id="17_dt7fs"]
-[ext_resource type="PackedScene" uid="uid://b451d0481ja7v" path="res://scenes/processes/jump_component.tscn" id="18_fulsm"]
+[ext_resource type="PackedScene" uid="uid://cq468wo2divat" path="res://scenes/processes/var_jump_component.tscn" id="18_fulsm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wqfne"]
 animations = [{
@@ -88,7 +88,7 @@ gravity_physics = NodePath("GravityPhysics")
 input_process = NodePath("InputProcess")
 movement_component = NodePath("MovementComponent")
 animation_component = NodePath("AnimationComponent")
-jump_component = NodePath("JumpComponent")
+jump_component = NodePath("VarJumpComponent")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=624123831]
 sprite_frames = SubResource("SpriteFrames_wqfne")
@@ -107,4 +107,4 @@ shape = SubResource("CapsuleShape2D_g2els")
 [node name="AnimationComponent" parent="." unique_id=910548865 node_paths=PackedStringArray("sprite") instance=ExtResource("17_dt7fs")]
 sprite = NodePath("../AnimatedSprite2D")
 
-[node name="JumpComponent" parent="." unique_id=2069709585 instance=ExtResource("18_fulsm")]
+[node name="VarJumpComponent" parent="." unique_id=478475842 instance=ExtResource("18_fulsm")]

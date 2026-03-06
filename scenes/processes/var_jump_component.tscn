@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cq468wo2divat"]
+
+[ext_resource type="Script" uid="uid://botacy4t7wblh" path="res://scenes/processes/var_jump_component.gd" id="1_d7n2k"]
+
+[node name="VariableJumpComponent" type="Node" unique_id=478475842 node_paths=PackedStringArray("jump_buffer_timer")]
+script = ExtResource("1_d7n2k")
+jump_buffer_timer = NodePath("JumpBufferTimer")
+
+[node name="JumpBufferTimer" type="Timer" parent="." unique_id=1384423674]
+wait_time = 0.1
+one_shot = true
