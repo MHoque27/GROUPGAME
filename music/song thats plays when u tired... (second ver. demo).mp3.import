@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ber3o7jhyof47"
+path="res://.godot/imported/song thats plays when u tired... (second ver. demo).mp3-b17446feea6ac704c9201ef1759bd7b5.mp3str"
+
+[deps]
+
+source_file="res://music/song thats plays when u tired... (second ver. demo).mp3"
+dest_files=["res://.godot/imported/song thats plays when u tired... (second ver. demo).mp3-b17446feea6ac704c9201ef1759bd7b5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

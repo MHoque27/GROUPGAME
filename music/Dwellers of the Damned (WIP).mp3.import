@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdnml6on5irt8"
+path="res://.godot/imported/Dwellers of the Damned (WIP).mp3-085b4c4e92f1076bdad893f475681785.mp3str"
+
+[deps]
+
+source_file="res://music/Dwellers of the Damned (WIP).mp3"
+dest_files=["res://.godot/imported/Dwellers of the Damned (WIP).mp3-085b4c4e92f1076bdad893f475681785.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

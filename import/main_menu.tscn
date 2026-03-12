@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://7poxabui32kg"]
+
+[ext_resource type="Script" uid="uid://mk8nicg72wgc" path="res://import/main_menu.gd" id="1_thily"]
+[ext_resource type="Texture2D" uid="uid://u704or17c5o7" path="res://music/gradient.png" id="2_appj1"]
+[ext_resource type="FontFile" uid="uid://dvawwwfno8o7c" path="res://import/GothicPixels.ttf" id="3_5qkai"]
+[ext_resource type="Texture2D" uid="uid://qkkncq56d4ee" path="res://import/test image 7.png" id="4_7prdw"]
+[ext_resource type="Texture2D" uid="uid://d1npi7dsy6rw4" path="res://import/spotlight_04_a.png" id="5_yrmlg"]
+[ext_resource type="Texture2D" uid="uid://b765au55tjpnc" path="res://music/spotlight_08_a.png" id="6_cbskf"]
+[ext_resource type="FontFile" uid="uid://cxv3brkhjck2n" path="res://import/Pixeled English Font.ttf" id="7_qt50m"]
+[ext_resource type="AudioStream" uid="uid://ber3o7jhyof47" path="res://music/song thats plays when u tired... (second ver. demo).mp3" id="8_thily"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ac4t"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_oji4o"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_7ac4t")
+
+[sub_resource type="Theme" id="Theme_xiolq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xiolq"]
+font = ExtResource("3_5qkai")
+font_size = 32
+outline_size = 7
+outline_color = Color(0.13, 0.13, 0.13, 1)
+shadow_size = 7
+shadow_color = Color(0.30323282, 0.30323282, 0.30323282, 0.72156864)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xiolq"]
+
+[node name="main_menu" type="MarginContainer" unique_id=1605369809]
+anchors_preset = -1
+anchor_right = 3.6000001
+anchor_bottom = 3.614
+offset_right = -3327.6904
+offset_bottom = -1879.8055
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.0037735)
+theme = SubResource("Theme_oji4o")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_thily")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=872912297]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=189553463]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=833095471]
+layout_mode = 2
+
+[node name="Gradient" type="TextureRect" parent="PanelContainer" unique_id=486202640]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.21176471)
+self_modulate = Color(0.66288584, 0.66288584, 0.66288584, 1)
+layout_mode = 2
+texture = ExtResource("2_appj1")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=2092557698]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=905595003]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=987292471]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_xiolq")
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=66365279]
+layout_mode = 2
+text = "SOMNICULOSIS"
+label_settings = SubResource("LabelSettings_xiolq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1491563389]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_7prdw")
+expand_mode = 4
+
+[node name="Spotlight04A" type="Sprite2D" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=743719287]
+unique_name_in_owner = true
+position = Vector2(617, 203.99251)
+scale = Vector2(1.1054688, 1.0701804)
+texture = ExtResource("5_yrmlg")
+
+[node name="Spotlight08A" type="Sprite2D" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1593357712]
+unique_name_in_owner = true
+position = Vector2(617, 204.98877)
+texture = ExtResource("6_cbskf")
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/HBoxContainer" unique_id=1970081319]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/HBoxContainer/PanelContainer" unique_id=2112285637]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="StartButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2" unique_id=599725305]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_qt50m")
+theme_override_font_sizes/font_size = 24
+text = "Start Game"
+
+[node name="LoadButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2" unique_id=1189231914]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_qt50m")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_xiolq")
+text = "Load Game"
+
+[node name="OptionButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2" unique_id=615196660]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_qt50m")
+theme_override_font_sizes/font_size = 24
+text = "Options"
+
+[node name="CreditsButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2" unique_id=1224467345]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_qt50m")
+theme_override_font_sizes/font_size = 24
+text = "Credits"
+
+[node name="ExitButton" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2" unique_id=804690185]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_qt50m")
+theme_override_font_sizes/font_size = 24
+text = "Exit"
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=922557498]
+unique_name_in_owner = true
+stream = ExtResource("8_thily")

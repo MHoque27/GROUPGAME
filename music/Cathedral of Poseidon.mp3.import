@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjjrmq072dy46"
+path="res://.godot/imported/Cathedral of Poseidon.mp3-c5808a28813d2d67041dce831b554079.mp3str"
+
+[deps]
+
+source_file="res://music/Cathedral of Poseidon.mp3"
+dest_files=["res://.godot/imported/Cathedral of Poseidon.mp3-c5808a28813d2d67041dce831b554079.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
