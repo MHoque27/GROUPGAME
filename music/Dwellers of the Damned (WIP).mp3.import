@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Dwellers of the Damned (WIP).mp3-085b4c4e92f1
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

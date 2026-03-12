@@ -1,7 +1,9 @@
 [gd_scene format=4 uid="uid://7qe7cy32akqm"]
 
 [ext_resource type="Texture2D" uid="uid://3ww6kr1fhc5q" path="res://assets/models/tileset.png" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://v40vbwgetv1t" path="res://main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://devlv77xlm22x" path="res://scenes/player.tscn" id="2_0xm2m"]
+[ext_resource type="AudioStream" uid="uid://cjjrmq072dy46" path="res://music/Cathedral of Poseidon.mp3" id="4_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("1_0xm2m")
@@ -202,6 +204,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_h2yge")
 
 [node name="Game" type="Node2D" unique_id=36013997]
+script = ExtResource("1_1bvp3")
 
 [node name="World" type="Node2D" parent="." unique_id=1616509885]
 
@@ -220,3 +223,7 @@ collision_visibility_mode = 1
 [node name="Parallax2D" type="Parallax2D" parent="World/Level" unique_id=408321566]
 
 [node name="player" parent="World/Level" unique_id=321061833 instance=ExtResource("2_0xm2m")]
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="." unique_id=222243691]
+unique_name_in_owner = true
+stream = ExtResource("4_lquwl")
