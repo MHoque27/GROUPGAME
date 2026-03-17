@@ -1,10 +1,16 @@
 extends MarginContainer
 
-
+@export var load_button: Button
+@export var play_button: Button
+@export var settings_button: Button
+@export var exit_button: Button
 # Called when the node enters the scene tree for the first time.
+var main_menu_buttons: Array
 func _ready() -> void:
 	pass # Replace with function body.
 	#tween(%TextureRect2, "rotation", Vector2(100, 200), 5.0)
+	main_menu_buttons = [load_button, play_button, settings_button, exit_button]
+	#_____
 	%MenuMusic.play()
 		#song ranked for best:
 		#1. cathedral
