@@ -23,7 +23,7 @@ func _ready() -> void:
 	#property go up and down independant of this loop, and in another
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	pass 
 	%TextureRect2.pivot_offset = %TextureRect2.size / 2
 	%TextureRect2.rotation_degrees += 15 * delta
 	%Spotlight04A.rotation_degrees -= 12 * delta

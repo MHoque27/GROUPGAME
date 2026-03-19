@@ -103,6 +103,7 @@ shape = SubResource("CapsuleShape2D_g2els")
 [node name="InputProcess" parent="." unique_id=1158769223 instance=ExtResource("3_qhqgy")]
 
 [node name="MovementComponent" parent="." unique_id=1248565539 instance=ExtResource("4_dqkch")]
+physics_interpolation_mode = 2
 
 [node name="AnimationComponent" parent="." unique_id=910548865 node_paths=PackedStringArray("sprite") instance=ExtResource("17_dt7fs")]
 sprite = NodePath("../AnimatedSprite2D")

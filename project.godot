@@ -15,6 +15,11 @@ run/main_scene="uid://7qe7cy32akqm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[debug]
+
+settings/physics_interpolation/scene_traversal="DEFAULT"
+settings/physics_interpolation=false
+
 [display]
 
 window/size/viewport_width=1280
@@ -51,9 +56,10 @@ dash={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+3d/physics_interpolation=true
+3d/physics_interpolation/enable_warnings=false
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-2d/snap/snap_2d_transforms_to_pixel=true
