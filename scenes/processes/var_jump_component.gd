@@ -6,7 +6,7 @@ extends Node
 @export var coyote_time_timer: Timer
 
 @export_subgroup("Settings")
-@export var jump_velocity: float = -350.0
+@export var jump_velocity: float = -385.0
 
 var is_going_up: bool = false
 var is_jumping: bool = false
