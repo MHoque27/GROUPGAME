@@ -6462,5 +6462,10 @@ tile_set = SubResource("TileSet_aoqsc")
 
 [node name="player" parent="." unique_id=321061833 instance=ExtResource("9_i2t4f")]
 
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1129401638]
+zoom = Vector2(3, 3)
+
+[node name="PlayerSpawnPoint" type="Marker2D" parent="player" unique_id=226943185]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1502676400]
 libraries/ = SubResource("AnimationLibrary_8cye3")
