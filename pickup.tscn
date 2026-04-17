@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://dbs3usg0qj7ia"]
 
+[ext_resource type="Script" uid="uid://dkv0af5jplbwx" path="res://pickup.gd" id="1_iqk3k"]
+
 [node name="Area2D" type="Area2D" unique_id=1684046237]
+position = Vector2(2, -1)
+scale = Vector2(inf, nan)
+script = ExtResource("1_iqk3k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=32011849]
 

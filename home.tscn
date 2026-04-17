@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://gda5gmcveqxx"]
+
+[ext_resource type="PackedScene" uid="uid://devlv77xlm22x" path="res://scenes/player.tscn" id="1_tt30a"]
+
+[node name="Home Level" type="Node2D" unique_id=2146229976]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=892831277]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1007292972]
+
+[node name="player" parent="." unique_id=321061833 instance=ExtResource("1_tt30a")]
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=485498039]
