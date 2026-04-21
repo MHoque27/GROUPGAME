@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="group game"
-run/main_scene="uid://7qe7cy32akqm"
+run/main_scene="uid://cwl2duaotqw0c"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://cb3y8ddiic3li"
 
 [debug]
 

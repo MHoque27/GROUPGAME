@@ -2,16 +2,28 @@
 
 [ext_resource type="Script" uid="uid://dyciaqdgd1xc5" path="res://game.gd" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://ca7r105ca0ppv" path="res://import/actual_main_menu.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://cd6h6qwkcatgk" path="res://transition_controller.tscn" id="3_feb5d"]
 
-[node name="Game" type="Node2D" unique_id=1737853798]
+[node name="Game" type="Node2D" unique_id=1737853798 node_paths=PackedStringArray("scene_holder", "transition_controller")]
 script = ExtResource("1_80nbo")
+scene_holder = NodePath("World")
+transition_controller = NodePath("CanvasLayer/TransitionController")
 
 [node name="World" type="Node2D" parent="." unique_id=744446737]
 
 [node name="main_menu" parent="World" unique_id=1605369809 instance=ExtResource("2_e2o6t")]
-offset_left = -1981.8452
-offset_top = -1257.9028
-offset_right = -1345.8452
-offset_bottom = -621.90283
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 636.0
+offset_bottom = 636.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=717117164]
+visible = false
+
+[node name="TransitionController" parent="CanvasLayer" unique_id=1246599532 instance=ExtResource("3_feb5d")]
+visible = false

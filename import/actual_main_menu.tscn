@@ -36,7 +36,8 @@ shadow_color = Color(0.30323282, 0.30323282, 0.30323282, 0.72156864)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xiolq"]
 
-[node name="main_menu" type="MarginContainer" unique_id=1605369809]
+[node name="main_menu" type="MarginContainer" unique_id=1605369809 node_paths=PackedStringArray("load_button", "play_button", "settings_button", "exit_button")]
+custom_minimum_size = Vector2(1280, 720)
 anchors_preset = -1
 anchor_right = 3.6000001
 anchor_bottom = 3.614
@@ -51,6 +52,10 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 script = ExtResource("1_r5oxt")
+load_button = NodePath("PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2/LoadButton")
+play_button = NodePath("PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2/StartButton")
+settings_button = NodePath("PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2/OptionButton")
+exit_button = NodePath("PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2/ExitButton")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=872912297]
 layout_mode = 2
@@ -158,3 +163,8 @@ text = "Exit"
 [node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=922557498]
 unique_name_in_owner = true
 stream = ExtResource("8_t2r72")
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2/LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/PanelContainer/VBoxContainer2/ExitButton" to="." method="_on_exit_button_pressed"]
