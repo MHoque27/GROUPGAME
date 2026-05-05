@@ -38,16 +38,21 @@ texture = ExtResource("1_1ey7h")
 3:2/0/terrain_set = 0
 4:1/0 = 0
 4:1/0/terrain_set = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:2/0 = 0
 4:2/0/terrain_set = 0
 3:1/0 = 0
 3:1/0/terrain_set = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
 2:1/0/terrain_set = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
 1:1/0/terrain_set = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
 0:1/0/terrain_set = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
 0:2/0/terrain_set = 0
 1:2/0 = 0
@@ -225,8 +230,15 @@ sources/0 = SubResource("TileSetAtlasSource_o1ld7")
 
 [node name="Home Level" type="Node2D" unique_id=2146229976]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1866417722]
+offset_left = -425.0
+offset_top = -314.0
+offset_right = 552.0
+offset_bottom = 248.0
+color = Color(0.43540755, 0.33225256, 0.24226084, 1)
+
 [node name="Collisiontile" type="TileMapLayer" parent="." unique_id=1773680812]
-tile_map_data = PackedByteArray("AAD2/woAAAAYABYAAAD2/wgAAAAYABYAAAD2/wYAAAAYABYAAAD2/wQAAAAYABYAAAD2/wIAAAAYABYAAAD2/wAAAAAYABYAAAD2//7/AAAYABYAAAD2//z/AAAYABYAAAD2//r/AAAYABYAAAAeAAoAAAAYABYAAAAeAAgAAAAYABYAAAAeAAYAAAAYABYAAAAeAAQAAAAYABYAAAAeAAIAAAAYABYAAAAeAAAAAAAYABYAAAAeAP7/AAAYABYAAAAeAPz/AAAYABYAAAAeAPr/AAAYABYAAAA=")
+tile_map_data = PackedByteArray("AAD2/woAAAAYABYAAAD2/wgAAAAYABYAAAD2/wYAAAAYABYAAAD2/wQAAAAYABYAAAD2/wIAAAAYABYAAAD2/wAAAAAYABYAAAD2//7/AAAYABYAAAD2//z/AAAYABYAAAD2//r/AAAYABYAAAAeAAoAAAAYABYAAAAeAAgAAAAYABYAAAAeAAYAAAAYABYAAAAeAAQAAAAYABYAAAAeAAIAAAAYABYAAAAeAAAAAAAYABYAAAAeAP7/AAAYABYAAAAeAPz/AAAYABYAAAAeAPr/AAAYABYAAAD2//j/AAAYABYAAAD2//b/AAAYABYAAAD2//T/AAAYABYAAAD2//L/AAAYABYAAAAeAPj/AAAYABYAAAAeAPb/AAAYABYAAAAeAPT/AAAYABYAAAAeAPL/AAAYABYAAAA=")
 tile_set = SubResource("TileSet_2ayvv")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1886948280]
@@ -250,9 +262,14 @@ tile_set = SubResource("TileSet_2ayvv")
 [node name="TileMapLayer5" type="TileMapLayer" parent="." unique_id=1498603867]
 tile_set = SubResource("TileSet_2ayvv")
 
+[node name="TileMapLayer6" type="TileMapLayer" parent="." unique_id=1650245657]
+tile_map_data = PackedByteArray("AAD0//D/AAAAAAEAAAD2//D/AAABAAEAAAD4//D/AAACAAEAAAD6//D/AAADAAEAAAAgAPD/AAAEAAEAAAD8//D/AAABAAEAAAD+//D/AAACAAEAAAAAAPD/AAADAAEAAAACAPD/AAABAAEAAAAEAPD/AAACAAEAAAAGAPD/AAADAAEAAAAIAPD/AAABAAEAAAAKAPD/AAACAAEAAAAMAPD/AAADAAEAAAAOAPD/AAABAAEAAAAQAPD/AAACAAEAAAASAPD/AAADAAEAAAAUAPD/AAABAAEAAAAWAPD/AAACAAEAAAAYAPD/AAADAAEAAAAaAPD/AAABAAEAAAAcAPD/AAACAAEAAAAeAPD/AAADAAEAAAA=")
+tile_set = SubResource("TileSet_2ayvv")
+
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1007292972]
 
 [node name="player" parent="." unique_id=321061833 instance=ExtResource("1_tt30a")]
+position = Vector2(205, -59)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=485498039]
 zoom = Vector2(4, 4)

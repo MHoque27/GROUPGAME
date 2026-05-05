@@ -9,6 +9,9 @@ func interact(player):
 
 	if Global.game:
 		print("CALLING GAME MANAGER")
+		$AudioStreamPlayer.play()
+		#$Timer.start()
+		#await $Timer.timeout
 		Global.game.change_scene(target_scene)
 	else:
 		print("GLOBAL GAME IS NULL")

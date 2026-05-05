@@ -15,14 +15,14 @@ func change_scene(
 	delete: bool = true, #delete the scene true or false
 	keep_running: bool = false, #hide the scene true or false
 	transition: bool = true, 
-	transition_in: String = "Fade In",
-	transition_out: String = "Fade Out",
-	seconds: float = 1.0):
+	transition_in: String = "fade_in",
+	transition_out: String = "fade_out",
+	seconds: float = 2):
 	
 	#fade to black
-	#if transition:
-		#transition_controller.transition(transition_in, seconds)
-		#await transition_controller.animation_player.animation_finished
+	if transition:
+		transition_controller.transition(transition_in, seconds)
+		await transition_controller.animation_player.animation_finished
 		
 	if current_scene != null:
 		if delete:
@@ -36,9 +36,9 @@ func change_scene(
 	current_scene = new
 	
 	#fade back in
-	#if transition:
-		#transition_controller.transition(transition_out, seconds)
-		#await transition_controller.animation_player.animation_finished
+	if transition:
+		transition_controller.transition(transition_out, seconds)
+		await transition_controller.animation_player.animation_finished
 		
 		
 #func _process(delta: float) -> void:
