@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dyciaqdgd1xc5" path="res://game.gd" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://ca7r105ca0ppv" path="res://import/actual_main_menu.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://cd6h6qwkcatgk" path="res://transition_controller.tscn" id="3_feb5d"]
+[ext_resource type="FontFile" uid="uid://b6wyqawcpci5k" path="res://import/Star Crush.ttf" id="4_fc0e3"]
 
 [node name="Game" type="Node2D" unique_id=1737853798 node_paths=PackedStringArray("scene_holder", "transition_controller")]
 script = ExtResource("1_80nbo")
@@ -23,7 +24,23 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=717117164]
-visible = false
 
 [node name="TransitionController" parent="CanvasLayer" unique_id=1246599532 instance=ExtResource("3_feb5d")]
 visible = false
+
+[node name="InteractLabel" type="Label" parent="CanvasLayer" unique_id=430104417 groups=["ui_prompt"]]
+visible = false
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = 150.0
+offset_right = 30.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.85, 0.76117504, 0.56949997, 1)
+theme_override_fonts/font = ExtResource("4_fc0e3")
+theme_override_font_sizes/font_size = 18

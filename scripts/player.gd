@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var movement_component: MovementComponent
 @export var animation_component: AnimationComponent
 @export var jump_component: VariableJumpComponent
-
+@onready var interaction_component = $InteractionComponent
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -17,5 +17,9 @@ func _physics_process(delta: float) -> void:
 	animation_component.handle_move_animation(input_process.input_horizontal)
 	jump_component.handle_jump(self, input_process.get_jump_input(), input_process.get_jump_input_released())
 	animation_component.handle_jump_animation(jump_component.is_going_up, gravity_physics.is_falling)
+	interaction_component.handle_interaction()
 	
 	move_and_slide()
+func _ready():
+	interaction_component.init(self)
+	interaction_component.connect_area($InteractionRadius)
