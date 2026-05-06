@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dxsihabymid51"
+path="res://.godot/imported/cry of fear - door locked.ogg-8e1c9043d667565efebd308208c6be4b.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/cry of fear - door locked.ogg"
+dest_files=["res://.godot/imported/cry of fear - door locked.ogg-8e1c9043d667565efebd308208c6be4b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

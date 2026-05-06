@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dm64imffnglos"
+path="res://.godot/imported/cry of fear - door 1.ogg-933ab80aef78f41074a41f0941777287.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/cry of fear - door 1.ogg"
+dest_files=["res://.godot/imported/cry of fear - door 1.ogg-933ab80aef78f41074a41f0941777287.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
