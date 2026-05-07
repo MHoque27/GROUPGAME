@@ -466,3 +466,6 @@ position = Vector2(186, -52)
 [node name="HomeDoor" parent="." unique_id=746952938 instance=ExtResource("6_xhus7")]
 position = Vector2(-36, -71)
 target_scene = "res://home.tscn"
+
+[node name="bedroomEnterPos" type="Marker2D" parent="." unique_id=300142451]
+position = Vector2(-36, -60)

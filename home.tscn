@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bdh6u0wlx87d5" path="res://Legacy-Fantasy - High Forest 2.0/Legacy-Fantasy - High Forest 2.3/Assets/Buildings.png" id="1_1ey7h"]
 [ext_resource type="PackedScene" uid="uid://devlv77xlm22x" path="res://scenes/player.tscn" id="1_tt30a"]
+[ext_resource type="Texture2D" uid="uid://nst4wwcw8i2k" path="res://Legacy-Fantasy - High Forest 2.0/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png" id="2_w1mvj"]
 [ext_resource type="PackedScene" uid="uid://cs1re8842cmpr" path="res://door.tscn" id="3_o1ld7"]
 [ext_resource type="AudioStream" uid="uid://cryf5ln50vf5m" path="res://music/cry of fear - door CLOSE 3 clean.mp3" id="4_2ayvv"]
 
@@ -221,6 +222,12 @@ texture = ExtResource("1_1ey7h")
 21:7/size_in_atlas = Vector2i(3, 4)
 21:7/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lxycn"]
+texture = ExtResource("2_w1mvj")
+texture_region_size = Vector2i(8, 8)
+6:10/size_in_atlas = Vector2i(4, 4)
+6:10/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_2ayvv"]
 tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
@@ -228,6 +235,7 @@ terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "InteriorSet"
 terrain_set_0/terrain_0/color = Color(0.7084641, 0, 0.34802032, 1)
 sources/0 = SubResource("TileSetAtlasSource_o1ld7")
+sources/1 = SubResource("TileSetAtlasSource_lxycn")
 
 [node name="Home Level" type="Node2D" unique_id=2146229976]
 
@@ -257,14 +265,14 @@ tile_map_data = PackedByteArray("AAAAAAYAAAABAAUAAAAKAAYAAAABAAUAAAAUAAYAAAABAAU
 tile_set = SubResource("TileSet_2ayvv")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=1785657368]
-tile_map_data = PackedByteArray("AAAAAAQAAAANAAUAAAAUAAQAAAANAAUAAAAKAAQAAAANAAUAAAD4/wQAAAANAAUAAAAcAAQAAAANAAUAAAD6//n/AAALAAsAAAD8//n/AAALAAsAAAD4//n/AAALAAsAAAAcAPn/AAALAAsAAAAaAPn/AAALAAsAAAAYAPn/AAALAAsAAAAFAPf/AAAUAAgAAAAFAPX/AAAUAAcAAAAPAPf/AAAUAAgAAAAPAPX/AAAUAAcAAAD7//X/AAAUAAcAAAD+//n/AAALAAsAAAAAAPn/AAALAAsAAAACAPn/AAALAAsAAAAEAPn/AAALAAsAAAAGAPn/AAALAAsAAAD7//f/AAAUAAgAAAAIAPn/AAALAAsAAAAKAPn/AAAMAAsAAAAWAPn/AAALAAsAAAAUAPn/AAAKAAsAAAAZAPb/AAAVAAcAAAD8/wAAAAAVAAcAAAA=")
-tile_set = SubResource("TileSet_2ayvv")
-
-[node name="TileMapLayer5" type="TileMapLayer" parent="." unique_id=1498603867]
+tile_map_data = PackedByteArray("AAAAAAQAAAANAAUAAAAUAAQAAAANAAUAAAAKAAQAAAANAAUAAAD4/wQAAAANAAUAAAAcAAQAAAANAAUAAAD6//n/AAALAAsAAAD8//n/AAALAAsAAAD4//n/AAALAAsAAAAcAPn/AAALAAsAAAAaAPn/AAALAAsAAAAYAPn/AAALAAsAAAAFAPf/AAAUAAgAAAAFAPX/AAAUAAcAAAAPAPf/AAAUAAgAAAAPAPX/AAAUAAcAAAD7//X/AAAUAAcAAAD+//n/AAALAAsAAAAAAPn/AAALAAsAAAACAPn/AAALAAsAAAAEAPn/AAALAAsAAAAGAPn/AAALAAsAAAD7//f/AAAUAAgAAAAIAPn/AAALAAsAAAAKAPn/AAAMAAsAAAAWAPn/AAALAAsAAAAUAPn/AAAKAAsAAAAZAPb/AAAVAAcAAAD8/wAAAAAVAAcAAAD5/wgAAAALAAMAAAA=")
 tile_set = SubResource("TileSet_2ayvv")
 
 [node name="TileMapLayer6" type="TileMapLayer" parent="." unique_id=1650245657]
-tile_map_data = PackedByteArray("AAD0//D/AAAAAAEAAAD2//D/AAABAAEAAAD4//D/AAACAAEAAAD6//D/AAADAAEAAAAgAPD/AAAEAAEAAAD8//D/AAABAAEAAAD+//D/AAACAAEAAAAAAPD/AAADAAEAAAACAPD/AAABAAEAAAAEAPD/AAACAAEAAAAGAPD/AAADAAEAAAAIAPD/AAABAAEAAAAKAPD/AAACAAEAAAAMAPD/AAADAAEAAAAOAPD/AAABAAEAAAAQAPD/AAACAAEAAAASAPD/AAADAAEAAAAUAPD/AAABAAEAAAAWAPD/AAACAAEAAAAYAPD/AAADAAEAAAAaAPD/AAABAAEAAAAcAPD/AAACAAEAAAAeAPD/AAADAAEAAAA=")
+tile_map_data = PackedByteArray("AAD0//D/AAAAAAEAAAD2//D/AAABAAEAAAD4//D/AAACAAEAAAD6//D/AAADAAEAAAAgAPD/AAAEAAEAAAD8//D/AAABAAEAAAD+//D/AAACAAEAAAAAAPD/AAADAAEAAAACAPD/AAABAAEAAAAEAPD/AAACAAEAAAAGAPD/AAADAAEAAAAIAPD/AAABAAEAAAAKAPD/AAACAAEAAAAMAPD/AAADAAEAAAAOAPD/AAABAAEAAAAQAPD/AAACAAEAAAASAPD/AAADAAEAAAAUAPD/AAABAAEAAAAWAPD/AAACAAEAAAAYAPD/AAADAAEAAAAaAPD/AAABAAEAAAAcAPD/AAACAAEAAAAeAPD/AAADAAEAAAD8/wkAAAANAAMAAAD+/woAAAAOAAMAAAAOAAoAAAAOAAMAAAAQAAoAAAAOAAMAAAASAAkAAAANAAMAAAAXAAkAAAANAAMAAAAXAAcAAAAOAAMAAAAaAAkAAQAGAAoAAAA=")
+tile_set = SubResource("TileSet_2ayvv")
+
+[node name="TileMapLayer5" type="TileMapLayer" parent="." unique_id=1498603867]
 tile_set = SubResource("TileSet_2ayvv")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1007292972]

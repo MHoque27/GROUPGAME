@@ -474,7 +474,7 @@ repeat_times = 10
 texture = ExtResource("3_7mycd")
 centered = false
 
-[node name="TileMapLayer3" type="TileMapLayer" parent="World/Level/Parallax2D2" unique_id=1037442737]
+[node name="TileMapLayer3" type="TileMapLayer" parent="World/Level" unique_id=1037442737]
 tile_map_data = PackedByteArray("AAArAAwAAAAVAAcAAAA=")
 tile_set = SubResource("TileSet_dg77c")
 
