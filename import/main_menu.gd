@@ -43,7 +43,7 @@ func tween(button, property, amount, duration):
 
 
 func _on_start_button_pressed() -> void:
-	Global.game.change_scene("res://home.tscn")
+	Global.game.change_scene("res://HomeBedroom.tscn")
 
 func _on_load_button_pressed() -> void:
 	print("load")

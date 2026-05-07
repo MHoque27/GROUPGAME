@@ -41,6 +41,7 @@ func handle_interaction():
 		var target = get_closest()
 		if target:
 			target.interact(player)
+			
 
 func get_closest():
 	var closest = null
