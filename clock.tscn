@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c3hgy8ijdrxwj" path="res://clock.gd" id="1_venu5"]
 [ext_resource type="FontFile" uid="uid://d4dugbsxvhfa" path="res://import/Alkhemikal.ttf" id="2_kig64"]
 [ext_resource type="AudioStream" uid="uid://c31r6r5ywp0mj" path="res://music/166185__drminky__mystical-object-aura.wav" id="3_4n1wf"]
+[ext_resource type="AudioStream" uid="uid://btd0dotj2yq02" path="res://music/454668__edufigueres__young-buddhist-monks-practising-with-metronome-at-buddhist-monastery-in-emei-shan-china.wav" id="4_cqx04"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kig64"]
 radius = 16.0
@@ -179,4 +180,8 @@ wait_time = 2.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=510600844]
 stream = ExtResource("3_4n1wf")
+volume_db = 4.86
+
+[node name="buddhitmetronom" type="AudioStreamPlayer" parent="." unique_id=949392800]
+stream = ExtResource("4_cqx04")
 volume_db = 4.86

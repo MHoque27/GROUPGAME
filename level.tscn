@@ -6499,7 +6499,7 @@ target_scene = "res://HomeBedroom.tscn"
 prompt_text = "Wake up"
 
 [node name="Clock" parent="." unique_id=1266087377 instance=ExtResource("13_v5j5c")]
-position = Vector2(111, 665)
+position = Vector2(543, 460)
 
 [node name="DreamWatchBackup5" type="Sprite2D" parent="Clock" unique_id=1462521540]
 position = Vector2(6.1035156e-05, 3.0517578e-05)

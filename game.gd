@@ -3,6 +3,7 @@ class_name GameController extends Node2D
 var current_scene
 @export var scene_holder : Node
 @export var transition_controller : Control
+var clock_taken = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
