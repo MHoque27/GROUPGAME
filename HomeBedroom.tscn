@@ -462,6 +462,7 @@ zoom = Vector2(4, 4)
 
 [node name="mainBed" parent="." unique_id=19254936 instance=ExtResource("5_s153u")]
 position = Vector2(186, -52)
+dream_weights = Array[int]([50, 25])
 
 [node name="HomeDoor" parent="." unique_id=746952938 instance=ExtResource("6_xhus7")]
 position = Vector2(-36, -71)
