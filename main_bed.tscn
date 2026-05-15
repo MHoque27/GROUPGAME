@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://4bv8tkdg508x"]
+
+[ext_resource type="Script" uid="uid://c5is6wyxjlldk" path="res://main_bed.gd" id="1_udnw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6msd5"]
+size = Vector2(47, 24)
+
+[node name="mainBed" type="Area2D" unique_id=19254936]
+script = ExtResource("1_udnw7")
+dream_weights = Array[int]([50, 50])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=781589977]
+position = Vector2(13.5, -2)
+shape = SubResource("RectangleShape2D_6msd5")
+
+[node name="Timer" type="Timer" parent="." unique_id=266964540]
+wait_time = 1.5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1282394693]

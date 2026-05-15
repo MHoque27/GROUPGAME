@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://nst4wwcw8i2k" path="res://Legacy-Fantasy - High Forest 2.0/Legacy-Fantasy - High Forest 2.3/Assets/Interior-01.png" id="2_s3v8h"]
 [ext_resource type="PackedScene" uid="uid://devlv77xlm22x" path="res://scenes/player.tscn" id="3_s153u"]
 [ext_resource type="Texture2D" uid="uid://lkapkuvsgk8b" path="res://assets/pixel bed.png" id="4_xhus7"]
-[ext_resource type="PackedScene" uid="uid://b08mtyekpfa1f" path="res://bed.tscn" id="5_s153u"]
+[ext_resource type="PackedScene" uid="uid://4bv8tkdg508x" path="res://main_bed.tscn" id="5_s153u"]
 [ext_resource type="PackedScene" uid="uid://cs1re8842cmpr" path="res://door.tscn" id="6_xhus7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s153u"]
@@ -460,7 +460,7 @@ position = Vector2(149, -60)
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=799686309]
 zoom = Vector2(4, 4)
 
-[node name="bed2" parent="." unique_id=520755988 instance=ExtResource("5_s153u")]
+[node name="mainBed" parent="." unique_id=19254936 instance=ExtResource("5_s153u")]
 position = Vector2(186, -52)
 
 [node name="HomeDoor" parent="." unique_id=746952938 instance=ExtResource("6_xhus7")]
