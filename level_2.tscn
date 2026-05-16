@@ -4059,3 +4059,5 @@ stream = ExtResource("5_ehv2h")
 unique_name_in_owner = true
 stream = ExtResource("6_15wb7")
 volume_db = -10.245
+
+[connection signal="finished" from="Intro" to="." method="_on_intro_finished"]
